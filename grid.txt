@@ -1,0 +1,14 @@
+grid-template: (grid-template-rows) / (grid-template-columns); - px, % o fr.
+grid-template-columns: repeat( (num columnas) , (ancho) );
+grid-template-columns: Xpx minmax(100px, 500px);
+grid-gap: (row-gap) (column-gap);
+grid-row: (grid-row-start) / (grid-row-end) ; - Numero
+grid-column: 4 / span 2; = grid-column-start: 4; grid-column-end: span 2;
+
+.item {
+  grid-area: 2 / 3 / 4 / span 5;
+}
+grid-row-start: 2;
+grid-column-start: 3;
+grid-row-end: 4;
+grid-column-end: 9;

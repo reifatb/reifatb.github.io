@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* HEADER */
+
+/* MAIN */
+
+.viajes {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+  "titulosec titulosec titulosec"
+  "destino1 destino2 destino3"
+  "cta cta cta";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  padding: 1rem;
+}
+
+.title {
+  grid-area: titulosec;
+  margin: 0 auto;
+}
+
+.destino1{
+  grid-area: destino1;
+}
+
+.destino2{
+  grid-area: destino2;
+}
+
+.destino3{
+  grid-area: destino3;
+}
+
+.ctaa {
+  margin: 0 auto;
+  grid-area: cta;
+  background-color: blanchedalmond;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+/* FOOTER */

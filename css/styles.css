@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* TEXTOS */
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Light.ttf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+ul,
+ol,
+li {
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.4;
+    margin-bottom: 0.2em;
+}
+
+h1,
+h2,
+h3 {
+    color: #4a291b;
+    margin-bottom: 0.9em;
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 2.1em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+
+
+
+section a,
+.tienda {
+    font-size: 0.9em;
+    background-color: #ef4f0b;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    font-weight: 600;
+}
+
+/* HEADER */
+.hamburger,
+.close {
+    font-size: 2rem;
+    color: #a3a3a3;
+    padding: 1rem;
+    display: none;
+}
+
+#logomenu {
+    display: none;
+}
+
+header {
+    background-color: #F5F4F2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    color: #4a291b;
+    padding: 0 1rem;
+}
+
+.menu {
+    width: 350px;
+    padding: 1rem;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.menu ul li {
+    list-style: none;
+}
+
+.logo {
+    height: 5rem;
+}
+
+/* MAIN */
+.slider {
+    background-image: url(../img/slider2.jpg);
+    margin: 0em;
+    width: 100%;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    height: 40em;
+    max-height: 40em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider h1 {
+    margin-bottom: 0.2em;
+}
+
+.slider-div {
+    width: 80%;
+    margin: 0em 3em;
+}
+
+.slider-div-caja {
+    background-color: #efdac9;
+    padding: 2em 3em;
+}
+
+.slider-div-caja > p {
+    margin-bottom: 0.4em;
+    color: #4a291b;
+}
+
+.slider-div-caja input {
+    width: 75%;
+    height: 2em;
+    border: 2px solid #4a291b;
+}
+
+.slider-div-caja input:nth-child(3) {
+    width: 10%;
+}
+
+.slider-div-caja a {
+    margin-left: -0.5em;
+    border: 1px solid #ef4f0b;
+}
+
+section {
+    margin: 4em 1em 2em 1em;
+}
+
+h3 > p {
+    margin-bottom: 1em;
+}
+
+div > p {
+    margin-bottom: 1.4em;
+}
+
+section h2 {
+    text-align: center;
+}
+
+.imagen-fondo {
+    width: 100%;
+    padding-top: 70%;
+    background-position-x: center;
+    background-position-y: center;
+    background-size: cover;
+    max-height: 20em;
+}
+
+.imagen-fondo-paris {
+    background-image: url(../img/paris.jpg);
+}
+
+.imagen-fondo-york {
+    background-image: url(../img/nueva-york.jpg);
+}
+
+.imagen-fondo-nom {
+    background-image: url(../img/nom-pen.jpg);
+}
+
+.viajes h3 {
+    margin-top: 1.4em;
+}
+
+.viajes-cta {
+    background-color: #efdac9;
+    padding: 2em;
+    margin-top: 1.4em;
+}
+
+.viajes-cta h3 {
+    margin-bottom: 0.4em;
+    margin-top: 0em;
+}
+
+/* GRIDs */
+body {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.viajes {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo titulo"
+        "dest1 dest2 dest3"
+        "cta cta cta";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.viajes-titulo {
+    grid-area: titulo;
+}
+
+.viajes-destino-uno {
+    grid-area: dest1;
+}
+
+.viajes-destino-dos {
+    grid-area: dest2;
+}
+
+.viajes-destino-tres {
+    grid-area: dest3;
+}
+
+.viajes-cta {
+    grid-area: cta;
+    display: grid;
+    grid-template-areas: "texto cta";
+    grid-template-columns: 70% 30%;
+    color: #4a291b;
+}
+
+.viajes-cta-texto {
+    grid-area: texto;
+}
+
+.viajes-cta-cta {
+    grid-area: cta;
+    margin: auto;
+}
+
+.about {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo"
+        "texto photo";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.about-titulo {
+    grid-area: titulo;
+}
+
+.about-photo {
+    grid-area: photo;
+}
+
+.about-photo img {
+    max-height: 50em;
+}
+
+.about-content {
+    grid-area: texto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.5em;
+    width: 90%;
+}
+
+.galery {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo titulo titulo"
+        "photo-vert-uno photo-horiz-grande photo-horiz-grande photo-vert-dos"
+        "photo-vert-uno photo-horiz-uno photo-horiz-dos photo-vert-dos";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.galery-titulo {
+    grid-area: titulo;
+}
+
+.galery-photo-vert-uno {
+    background-image: url(../img/nom-pen.jpg);
+    grid-area: photo-vert-uno;
+}
+
+.galery-photo-vert-dos {
+    background-image: url(../img/nueva-york.jpg);
+    grid-area: photo-vert-dos;
+}
+
+.galery-photo-horiz-grande {
+    background-image: url(../img/moscu.jpg);
+    grid-area: photo-horiz-grande;
+    padding-top: 41% !important;
+}
+
+.galery-photo-horiz-uno {
+    background-image: url(../img/vigo.jpeg);
+    grid-area: photo-horiz-uno;
+}
+
+.galery-photo-horiz-dos {
+    background-image: url(../img/paris.jpg);
+    grid-area: photo-horiz-dos;
+}
+
+.web {
+    display: grid;
+    grid-template-areas:
+        "titulo titulo"
+        "photo texto"
+        "cta cta";
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+}
+
+.web-titulo {
+    grid-area: titulo;
+}
+
+.web-photo {
+    grid-area: photo;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.web-photo img {
+    max-height: 50em;
+    width: 100%;
+}
+
+.web-content {
+    grid-area: texto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 1.5em;
+    width: 90%;
+}
+
+.web-cta {
+    grid-area: cta;
+    display: grid;
+    grid-template-areas: "texto cta";
+    grid-template-columns: 70% 30%;
+    color: #4a291b;
+}
+
+.web-cta-texto {
+    grid-area: texto;
+}
+
+.web-cta-cta {
+    grid-area: cta;
+    margin: auto;
+}
+
+/* FOOTER */
+footer {
+    display: grid;
+    grid-area: footer;
+    grid-template-areas: "footexpl footap footcont""footlogo footlogo footlogo";
+    background-color: #4a291b;
+    color: #FFFFFF;
+}
+
+footer h2 {
+    color: #ffffff;
+    font-size: 1.6em;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+footer div {
+    margin-top: 1.2em;
+    margin-bottom: 0.8em;
+}
+
+.footer-explorar {
+    grid-area: footexpl;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-apoyar {
+    grid-area: footap;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-contactar {
+    grid-area: footcont;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer-logo {
+    grid-area: footlogo;
+    width: 100%;
+    background-color: #F5F4F2;
+    text-align: center;
+    color: #181818;
+    margin-bottom: 0em;
+}
+
+
+/* MEDIA QUERY */
+@media (max-width: 800px) {
+    header {
+        flex-direction: row;
+    }
+
+    header > p {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    #logomenu {
+        display: block;
+        height: 6rem;
+    }
+
+    .menu {
+        background-color: #F5F4F2;
+        position: absolute;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        transform: translateY(-100%);
+        transition: transform 0.2s ease;
+        padding: 0;
+    }
+
+    .menu ul {
+        margin: 1rem auto 0 auto;
+        flex-direction: column;
+        height: 35%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    #menu:target {
+        transform: translateY(0);
+    }
+
+    .hamburger,
+    .close {
+        display: block;
+        color: #ef4f0b;
+    }
+
+    .close {
+        margin-right: 1rem;
+    }
+
+    .viajes {
+        grid-template-areas:
+            "titulo"
+            "dest1"
+            "dest2"
+            "dest3"
+            "cta";
+    }
+
+    .viajes > div {
+        margin-bottom: 3em;
+    }
+
+    .viajes-cta {
+        grid-template-areas:
+            "texto"
+            "cta";
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .about {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "photo"
+            "texto";
+    }
+
+    .about-photo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about-photo img {
+        max-height: 35em;
+    }
+
+    .web {
+        display: grid;
+        grid-template-areas:
+            "titulo"
+            "photo"
+            "texto"
+            "cta";
+    }
+
+    .web-photo img {
+        max-height: 30em;
+    }
+
+    .web-cta {
+        grid-template-areas:
+            "texto"
+            "cta";
+        grid-template-columns: auto;
+        text-align: center;
+    }
+
+    .web-cta-cta {
+        margin-top: 1.4em;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .menu ul {
+        height: 45%;
+    }
+
+    .close {
+        position: absolute;
+        right: 0.1em;
+    }
+
+    .slider-div-caja {
+        text-align: center;
+        padding: 2em 1em;
+    }
+
+    .slider-div-caja > p {
+        margin-bottom: 1.2em;
+    }
+
+    .slider-div-caja input {
+        margin-bottom: 1.2em;
+        width: 100%;
+    }
+
+    .slider-div-caja a {
+        margin-left: 0em;
+        padding: 0.4em 3em;
+    }
+
+    footer {
+        grid-template-areas:
+            "footexpl"
+            "footap"
+            "footcont"
+            "footlogo";
+    }
+
+    .footer-apoyar {
+        width: 65%;
+    }
+
+    .footer-explorar {
+        width: 65%;
+    }
+
+    .footer-contactar {
+        width: 65%;
+    }
+
+}
