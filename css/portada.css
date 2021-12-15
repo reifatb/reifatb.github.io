@@ -1,0 +1,95 @@
+/*$button-bg-color: #348AA7;
+$button-border-color: #166E84;*/
+
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
+body {
+    display: grid;
+    background-color: rgb(226, 226, 226);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0px 10px 5px 10px;
+}
+
+nav a {
+    display: block;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 1em;
+    width: 100px;
+}
+
+nav a:hover {
+    color: white;
+    transform: translateY(2px);
+}
+
+nav a:active,
+nav a:active:focus,
+nav a:active:hover {
+    transform: translateY(4px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+}
+
+.hi {
+    background-color: rgb(255, 249, 158);
+    box-shadow: 0 5px 0px rgb(255, 249, 158);
+    border-bottom: 2px solid rgb(255, 206, 100);
+}
+
+.hi:hover,
+.hi:focus {
+    outline: none;
+    background-color: rgb(255, 244, 88);
+    box-shadow: 0 3px 0px rgb(255, 244, 88);
+    border-bottom: 2px solid rgb(255, 206, 100);
+    color: black;
+}
+
+.cv {
+    background-color: rgb(189, 214, 238);
+    box-shadow: 0 5px 0px rgb(189, 214, 238);
+    border-bottom: 2px solid rgb(143, 192, 238);
+}
+
+.cv:hover,
+.cv:focus {
+    outline: none;
+    background-color: rgb(143, 192, 238);
+    box-shadow: 0 3px 1px rgb(143, 192, 238);
+    border-bottom: 2px solid rgb(93, 168, 238);
+}
