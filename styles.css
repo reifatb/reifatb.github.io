@@ -1,0 +1,437 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER */
+
+header {
+  background-color: #181818;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 5rem;
+}
+
+header p {
+  color: #d4040e;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
+#menu {
+  color: #fff;
+  width: 650px;
+  padding: 1rem;
+}
+#menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#menu ul li {
+  list-style: none;
+  font-weight: bold;
+  color: #a3a3a3;
+  font-size: 0.9em;
+}
+
+#menu ul li:hover {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #d4040e;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  transition: all 0.4s;
+}
+
+.hamburger,
+.close {
+  font-size: 2rem;
+  color: #a3a3a3;
+  padding: 1rem;
+  display: none;
+}
+
+#terror {
+  display: none;
+}
+
+/* MAIN */
+body,
+input,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+  background-color: #181818;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.horarios {
+  background-color: #181818;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+footer {
+  background-color: #000000;
+  padding: 1.3em;
+}
+
+.contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contacto div {
+  flex: 50%;
+}
+
+article {
+  padding: 0em 1.3em;
+  flex: 30%;
+}
+
+.horarios-historias > h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.horarios-historias > table {
+  color: #fff;
+  text-align: center;
+  margin-top: 1em;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.horarios-historias th {
+  color: #d4040e;
+  padding: 0.8em;
+  border-left: none;
+  border-bottom: 1px solid #a3a3a3;
+}
+
+.horarios-historias td {
+  width: 11em;
+  height: 3em;
+  padding: 1.2em;
+  border-bottom: 1px solid #a3a3a3;
+  border-right: 1px solid #a3a3a3;
+}
+
+.horarios-historias td span {
+  transition: all 1s;
+}
+
+.horarios-historias td:hover span {
+  display: block;
+  font-size: 1.1em;
+  color: #d4040e;
+  font-weight: bold;
+  transform: rotate(180deg);
+  transition: all 1s;
+}
+
+.horarios-historias tr:nth-child(n) {
+  border-left: 1px solid #a3a3a3;
+}
+
+.horarios-historias tr:nth-child(1) {
+  border-left: none;
+}
+
+.horarios-historias td:nth-child(2n) {
+  background-color: #000000;
+}
+
+#skull {
+  display: none;
+}
+
+@media (max-aspect-ratio: 1/1) {
+  section {
+    flex-direction: column;
+  }
+
+  header {
+    flex-direction: row-reverse;
+  }
+
+  header > p {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  #menu {
+    background-color: #181818;
+    position: absolute;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 0.2s ease;
+    padding: 0;
+  }
+
+  #menu ul {
+    margin: 1rem auto 0 auto;
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  #menu:target {
+    transform: translateY(0);
+  }
+
+  .hamburger,
+  .close {
+    display: block;
+    color: #ffffff;
+  }
+
+  .close {
+    margin-right: 1rem;
+  }
+
+  #menu ul li:first-child {
+    display: block;
+    color: #d4040e;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-size: 1.4em;
+  }
+
+  aside:hover {
+    transition: 0.5s;
+    width: 100%;
+  }
+
+  aside:hover > #skull {
+    opacity: 100;
+    top: 40vw;
+    left: 25vw;
+    width: 40vw;
+    display: block;
+    position: absolute;
+    height: auto;
+  }
+
+  .contacto {
+    flex-direction: column-reverse;
+    margin-left: 1.2em;
+  }
+
+  .contacto h2 {
+    margin-top: 1em;
+  }
+}
+
+aside {
+  flex: 60%;
+}
+
+aside img {
+  width: 100%;
+  height: 100%;
+}
+
+.titulo {
+  font-size: 2em;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: arial;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  animation-name: titulo-animado;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0, 0.79, 0.95, -0.41);
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+.informacion {
+  padding: 0px;
+  margin-bottom: 1.1em;
+  list-style: none;
+  color: #a3a3a3;
+  animation-name: descripcion-animada;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-direction: alternate;
+}
+
+.descripcion {
+  color: #a3a3a3;
+  margin-bottom: 2em;
+  animation-name: descripcion-animada;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-delay: 1s;
+  animation-direction: alternate;
+}
+
+article p {
+  color: #ffffff;
+  margin-bottom: 1em;
+}
+
+footer h2 {
+  color: #ffffff;
+  margin-bottom: 1.1em;
+}
+
+.contacto > div:nth-child(2) {
+  flex-grow: 4;
+  flex-shrink: 0;
+  flex-basis: 25px;
+}
+
+.contacto > div > ul {
+  list-style: square;
+}
+
+.contacto > div > ul > li {
+  padding-bottom: 1.2em;
+  color: #fff;
+  transition: all 0.7s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.contacto > div > ul > li:hover {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #d4040e;
+  transition: all 0.7s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.contacto > div > ul > li:hover::before {
+  color: #d4040e;
+  font-size: 1.2em;
+  transition: all 0.7s;
+  content: " 💀 ";
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+.contacto > div > ul > li:hover::after {
+  color: #d4040e;
+  font-size: 1.2em;
+  transition: all 0.7s;
+  content: " 💀 ";
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+footer > p {
+  color: #fff;
+  font-size: 0.9em;
+  margin-top: 2em;
+  text-align: center;
+  transition: all 0.7s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+footer > p:hover {
+  font-weight: bold;
+  color: #d4040e;
+  font-size: 0.95em;
+  transition: all 0.7s;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+footer > p:hover::before {
+  color: #d4040e;
+  font-size: 0.95em;
+  transition: all 0.7s;
+  content: " 💀 ";
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+footer > p:hover::after {
+  color: #d4040e;
+  font-size: 0.95em;
+  transition: all 0.7s;
+  content: " 💀 ";
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+
+form > label {
+  color: #ffffff;
+}
+
+form > label > input,
+form > label > textarea {
+  background-color: #000000;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  color: #fff;
+  font-weight: bold;
+}
+
+label:hover {
+  color: #d4040e;
+  transition: all 0.7s;
+}
+
+form > label > input:hover,
+form > label > input:active,
+form > label > input:focus-visible,
+form > label > textarea:hover,
+form > label > textarea:active,
+form > label > textarea:focus-visible {
+  border-bottom: 2px solid #d4040e;
+  color: #fff;
+  outline: none;
+}
+
+input,
+textarea {
+  width: 80%;
+}
+
+@keyframes titulo-animado {
+  0% {
+    color: #ffffff;
+  }
+
+  100% {
+    color: #d4040e;
+  }
+}
+
+@keyframes descripcion-animada {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 10px;
+  }
+}
