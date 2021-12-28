@@ -206,7 +206,7 @@ p {
     gap: 3rem;
 }
 
-article {
+.card.abilities article {
     width: 33%;
     display: flex;
     flex-direction: column;
