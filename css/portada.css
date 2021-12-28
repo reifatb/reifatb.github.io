@@ -195,6 +195,7 @@ p {
 
 .card.abilities {
     height: 60vh;
+    width: 60rem;
 }
 
 .card.abilities>div {
