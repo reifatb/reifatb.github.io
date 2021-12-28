@@ -186,14 +186,23 @@ p {
 
 /*hi*/
 
-.hi.card {
+.card.hi {
     width: 40rem;
+}
+
+.card.hi,
+.card.abilities,
+.card.experience,
+.card.studies {
+    max-height: 556px;
 }
 
 
 /*abilities*/
 
-.card.abilities {
+.card.abilities,
+.card.experience,
+.card.studies {
     height: 60vh;
     width: 60rem;
 }
