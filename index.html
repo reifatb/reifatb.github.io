@@ -14,23 +14,146 @@
 
 <body>
 
-    <main>
-        <h1>Rafael Teniente Barrada</h1>
-        <nav>
+    <header>
+        <h1 id="rt">Rafael Teniente</h1>
+
+        <nav class="menu">
             <ul>
                 <li>
-                    <a class="hi" href="">¡Hola!</a>
+                    <a id="hibutton" class="hi button" href="#hi">¡Hola!</a>
                 </li>
                 <li>
-                    <a class="cv" href="cv.html">CV</a>
+                    <a id="experiencebutton" class="experience button" href="#experience">Experiencia</a>
+                </li>
+                <li>
+                    <a id="studiesbutton" class="studies button" href="#studies">Estudios</a>
+                </li>
+                <li>
+                    <a id="abilitiesbutton" class="abilities button" href="#abilities">Habilidades</a>
                 </li>
             </ul>
         </nav>
+    </header>
 
+    <main>
 
+        <div class="container">
+            <section id="hi">
+                <div class="card hi">
+                    <h2>!Hola!</h2>
+
+                    <p>Mi nombre es Rafael Teniente.</p>
+                    <p>Soy graduado en Administración y Dirección de Empresas por la Universidad de Vigo y actualmente curso un ciclo superior en Desarrollo de Aplicaciones Web.</p>
+                    <p> Entre mis aficiones se encuentran el cine y la lectura.</p>
+                </div>
+            </section>
+
+            <section id="experience">
+                <div class="card experience">
+                    <h2>Experiencia</h2>
+                </div>
+            </section>
+
+            <section id="studies">
+                <div class="card studies">
+                    <h2>Estudios</h2>
+                </div>
+            </section>
+
+            <section id="abilities">
+                <div class="card abilities">
+                    <h2>Habilidades</h2>
+
+                    <div>
+                        <article class="languages">
+                            <h3>Idiomas</h3>
+                            <div>
+                                <div class="spanish language">
+                                    <img class="icon" src="images/Spain_clip_art.svg" alt="Spanish" />
+                                    <p>Nativo</p>
+                                </div>
+                                <div class="galician language">
+                                    <img class="icon" src="images/SpainGalicia_clip_art.svg" alt="Galician" />
+                                    <p>Nativo</p>
+                                </div>
+                                <div class="english language">
+                                    <img class="icon" src="images/United_Kingdom_Flag_clip_art.svg" alt="English" />
+                                    <p>Medio</p>
+                                </div>
+                                <div class="portuguese language">
+                                    <img class="icon" src="images/Portugal_clip_art.svg" alt="Portuguese" />
+                                    <p>Básico</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="msoffice">
+                            <h3>Office</h3>
+                            <div>
+                                <div class="word office">
+                                    <img class="icon" src="images/Microsoft_Office_Word.svg" alt="MS Word" />
+                                    <p>Medio</p>
+                                </div>
+                                <div class="excel office">
+                                    <img class="icon" src="images/Microsoft_Office_Excel.svg" alt="MS Excel" />
+                                    <p>Medio</p>
+                                </div>
+                                <div class="powerpoint office">
+                                    <img class="icon" src="images/Microsoft_Office_PowerPoint.svg" alt="MS Power Point" />
+                                    <p>Medio</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="webskills">
+                            <h3>Web</h3>
+                            <div>
+                                <div class="html web">
+                                    <img class="icon" src="images/HTML5 Logo.svg" alt="HTML" />
+                                    <p>Medio</p>
+                                </div>
+                                <div class="css web">
+                                    <img class="icon" src="images/CSS3_logo_and_wordmark.svg" alt="CSS" />
+                                    <p>Medio</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
 
     </main>
 
 </body>
+
+<script>
+    const rt = document.getElementById('rt')
+    const hibutton = document.getElementById('hibutton')
+
+    /*hibutton.addEventListener('mouseover', () => rt.style.backgroundColor = "rgb(255, 244, 88)")
+    hibutton.addEventListener('mouseleave', () => rt.style.backgroundColor = "")
+
+    abilitiesbutton.addEventListener('mouseover', () => rt.style.backgroundColor = "rgb(143, 192, 238)")
+    abilitiesbutton.addEventListener('mouseleave', () => rt.style.backgroundColor = "")
+
+    experiencebutton.addEventListener('mouseover', () => rt.style.backgroundColor = "rgb(143, 226, 152)")
+    experiencebutton.addEventListener('mouseleave', () => rt.style.backgroundColor = "")
+
+    studiesbutton.addEventListener('mouseover', () => rt.style.backgroundColor = "rgb(255, 136, 136)")
+    studiesbutton.addEventListener('mouseleave', () => rt.style.backgroundColor = "")*/
+
+    hibutton.addEventListener('mouseover', () => rt.style.color = "rgb(255, 244, 88)")
+    hibutton.addEventListener('mouseleave', () => rt.style.color = "")
+
+    experiencebutton.addEventListener('mouseover', () => rt.style.color = "rgb(143, 192, 238)")
+    experiencebutton.addEventListener('mouseleave', () => rt.style.color = "")
+
+    studiesbutton.addEventListener('mouseover', () => rt.style.color = "rgb(143, 226, 152)")
+    studiesbutton.addEventListener('mouseleave', () => rt.style.color = "")
+
+    abilitiesbutton.addEventListener('mouseover', () => rt.style.color = "rgb(255, 136, 136)")
+    abilitiesbutton.addEventListener('mouseleave', () => rt.style.color = "")
+</script>
 
 </html>
