@@ -1,0 +1,35 @@
+body {
+    background-color: #FA7070;
+}
+
+#container {
+    background-color: #FBF2CF;
+}
+
+.switchPalette {
+    color: #ffd900;
+    
+}
+
+#button {
+    background-color: #FA7070;
+    box-shadow: 0 5px 0px #FA7070;
+    border-bottom: 2px solid #e43c3c;
+}
+
+#button:hover {
+    box-shadow: 0 3px 0px #FA7070;
+    outline: none;
+    transform: translateY(2px);
+}
+
+#button:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+#button:active {
+    transform: translateY(4px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+}

@@ -1,0 +1,38 @@
+body {
+    background-color: #76BA99;
+}
+
+#container {
+    background-color: #FFDCAE;
+}
+
+.switchPalette {
+    color: #d31c1c;
+}
+
+#button {
+    background-color: #76BA99;
+}
+
+#button {
+    background-color: #76BA99;
+    box-shadow: 0 5px 0px #76BA99;
+    border-bottom: 2px solid #369467;
+}
+
+#button:hover {
+    box-shadow: 0 3px 0px #76BA99;
+    outline: none;
+    transform: translateY(2px);
+}
+
+#button:focus {
+    outline: none;
+    text-decoration: none;
+}
+
+#button:active {
+    transform: translateY(5px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+}

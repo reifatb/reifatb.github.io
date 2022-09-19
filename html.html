@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css" />
+    <link rel="stylesheet" href="paleta1.css" />
+    <script
+      src="https://kit.fontawesome.com/6e958aa634.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Varela+Round"
+    />
+  </head>
+
+  <body>
+    <!--<i id="switchPalette" class="fas fa-sync-alt switchPalette"></i>-->
+    <i id="switchPalette" class="fa-solid fa-paintbrush switchPalette"></i>
+    <div id="container">
+      <div id="ej2">
+        <h1>Ejercicio 2</h1>
+        <p>
+          <label>Número 1 <input id="input1" type="text" autofocus /></label>
+        </p>
+        <p>
+          <label>Número 2 <input id="input2" type="text" /></label>
+        </p>
+
+        <button id="button">Listo</button>
+
+        <p id="instrucciones">Introduce 2 números</p>
+
+        <div class="resultados">
+          <p id="suma" class="resultado" style="display: none"></p>
+          <p id="resta" class="resultado" style="display: none"></p>
+          <p id="multiplicacion" class="resultado" style="display: none"></p>
+          <p id="division" class="resultado" style="display: none"></p>
+        </div>
+
+        <script src="js.js" defer></script>
+      </div>
+    </div>
+  </body>
+</html>
