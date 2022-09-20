@@ -33,3 +33,22 @@ body {
     border-bottom-width: 2px;
     box-shadow: none;
 }
+
+@media (hover: hover) {
+    #button:hover {
+        box-shadow: 0 3px 0px #FA7070;
+        outline: none;
+        transform: translateY(2px);
+    }
+    
+    #button:focus {
+        outline: none;
+        text-decoration: none;
+    }
+    
+    #button:active {
+        transform: translateY(4px);
+        border-bottom-width: 2px;
+        box-shadow: none;
+    }
+}

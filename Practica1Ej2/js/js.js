@@ -67,7 +67,7 @@ function switchPalette() {
         palette = Math.floor(Math.random() * 4 + 1);
     }
 
-    css.setAttribute('href', `paleta${palette}.css`);
+    css.setAttribute('href', `css/paleta${palette}.css`);
     //css.href = `paleta${palette}`;
 
     random = palette;
