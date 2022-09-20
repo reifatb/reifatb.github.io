@@ -1,0 +1,39 @@
+* {
+    font-family: monospace;
+    font-size: 24px;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2bbed1;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 60px;
+    color: #8f1ab6;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin-top: 1rem;
+
+}
+
+a {
+    text-decoration: none;
+    color: #c90086;
+    font-weight: bold;
+}
+

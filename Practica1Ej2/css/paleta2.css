@@ -16,6 +16,7 @@ body {
     border-bottom: 2px solid #2493ee;
 }
 
+/*
 #button:hover {
     box-shadow: 0 3px 0px #ABD9FF;
     outline: none;
@@ -26,9 +27,30 @@ body {
     outline: none;
     text-decoration: none;
 }
+*/
 
 #button:active {
     transform: translateY(5px);
     border-bottom-width: 2px;
     box-shadow: none;
+}
+
+@media (hover: hover) {
+    #button:hover {
+        box-shadow: 0 3px 0px #ABD9FF;
+        outline: none;
+        transform: translateY(2px);
+    }
+    
+    #button:focus {
+        outline: none;
+        text-decoration: none;
+    }
+
+    #button:active {
+        transform: translateY(5px);
+        border-bottom-width: 2px;
+        box-shadow: none;
+    }
+    
 }

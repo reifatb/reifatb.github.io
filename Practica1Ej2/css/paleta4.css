@@ -20,6 +20,7 @@ label, h1, #instrucciones {
     border-bottom: 2px solid #7fdb68;
 }
 
+/*
 #button:hover {
     box-shadow: 0 3px 0px #D3EBCD;
     outline: none;
@@ -30,9 +31,29 @@ label, h1, #instrucciones {
     outline: none;
     text-decoration: none;
 }
+*/
 
 #button:active {
     transform: translateY(5px);
     border-bottom-width: 2px;
     box-shadow: none;
+}
+
+@media (hover: hover) {
+    #button:hover {
+        box-shadow: 0 3px 0px #D3EBCD;
+        outline: none;
+        transform: translateY(2px);
+    }
+    
+    #button:focus {
+        outline: none;
+        text-decoration: none;
+    }
+
+    #button:active {
+        transform: translateY(5px);
+        border-bottom-width: 2px;
+        box-shadow: none;
+    }
 }
