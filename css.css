@@ -37,3 +37,6 @@ a {
     font-weight: bold;
 }
 
+.tooltip .tooltiptext {
+    visibility: hidden;
+}
