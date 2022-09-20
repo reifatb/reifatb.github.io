@@ -36,7 +36,3 @@ a {
     color: #c90086;
     font-weight: bold;
 }
-
-.tooltip .tooltiptext {
-    visibility: hidden;
-}
