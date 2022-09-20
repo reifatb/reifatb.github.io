@@ -28,13 +28,14 @@ body {
     outline: none;
     text-decoration: none;
 }
+*/
 
 #button:active {
     transform: translateY(4px);
     border-bottom-width: 2px;
     box-shadow: none;
 }
-*/
+
 
 @media (hover: hover) {
     #button:hover {
