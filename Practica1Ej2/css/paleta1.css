@@ -17,6 +17,7 @@ body {
     border-bottom: 2px solid #e43c3c;
 }
 
+/*
 #button:hover {
     box-shadow: 0 3px 0px #FA7070;
     outline: none;
@@ -33,6 +34,7 @@ body {
     border-bottom-width: 2px;
     box-shadow: none;
 }
+*/
 
 @media (hover: hover) {
     #button:hover {
