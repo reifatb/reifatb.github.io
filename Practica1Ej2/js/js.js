@@ -9,12 +9,13 @@ let instrucciones = document.getElementById('instrucciones');
 let random = 0;
 //let boton = document.getElementById(button);
 
-
 document.getElementById('button').addEventListener('click', listo);
+document.getElementById('switchPalette').addEventListener('click', switchPalette);
 
 input1.addEventListener("keypress", teclaEnter);
 input2.addEventListener("keypress", teclaEnter);
 
+switchPalette();
 
 function listo() {
     if (isNumber(input1.value) && isNumber(input2.value)) {
@@ -57,7 +58,6 @@ function teclaEnter(event) {
     }
 }
 
-document.getElementById('switchPalette').addEventListener('click', switchPalette);
 
 function switchPalette() {
     let css = document.getElementsByTagName('link')[1];
@@ -73,5 +73,4 @@ function switchPalette() {
     random = palette;
 }
 
-switchPalette();
 //}
