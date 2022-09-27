@@ -4,17 +4,17 @@ window.onload = function () {
     const abrir = document.getElementById('abrir');
     const cerrar = document.getElementById('cerrar');
     let ventana;
+    const botonVentana = document.getElementById('botonVentana');
 
     abrir.addEventListener('click', abrirVentana);
     cerrar.addEventListener('click', cerrarVentana);
-
+    botonVentana.addEventListener('click', () => { window.close() });
 
     function abrirVentana() {
         let opciones = `width=${entrada1.value},height=${entrada2.value}`;
         if (!ventana || ventana.closed) {
-            ventana = window.open('', 'Ventana creada', opciones);
-            console.log(ventana.innerWidth);
-            console.log(ventana.innerHeight);
+            ventana = window.open('ventana.html', 'Ventana creada', opciones);
+            escribirVentana();
         }
 
     }
@@ -24,4 +24,11 @@ window.onload = function () {
             ventana.close();
         }
     }
+
+    function escribirVentana() {
+        ventana.document.write('<button id="botonCerrar">Cerrar</button>');
+        let botonCerrar = ventana.document.getElementById('botonCerrar');
+        botonCerrar.addEventListener('click', () => { ventana.close() });
+    }
+
 }
