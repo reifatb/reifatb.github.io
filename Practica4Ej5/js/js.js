@@ -8,23 +8,24 @@ window.onload = function () {
     const sumandos = document.getElementById('sumandos');
     const resultados = document.getElementById('resultados');
 
-    sumarMatrices.setAttribute('disabled', '')
-
     let filas = parseInt(entrada1.value);
     let columnas = parseInt(entrada2.value);
     let numMatrices = parseInt(entrada3.value);
     let resultado;
 
+    sumarMatrices.setAttribute('disabled', '')
 
     crearMatrices.addEventListener('click', () => {
         if (comprobarInputs(entradas)) {
             borrarMatrices(sumandos);
             borrarMatrices(resultados)
+            //Borra el fondo de CSS (pone display none)
             resultados.classList.add('containerMatriz');
             leerEntradas();
             matrices(numMatrices, 'sumando', sumandos);
             pintarTitulo('Sumandos', sumandos)
             activarSuma();
+            //Le pone fondo de CSS (quita display none)
             sumandos.classList.remove('containerMatriz');
         }
     });
@@ -35,9 +36,12 @@ window.onload = function () {
             matrices(1, 'resultado', resultados)
             sumar();
             pintarTitulo('Resultado', resultados);
+            //Le pone fondo de CSS (quita display none)
             resultados.classList.remove('containerMatriz');
         } else {
             borrarMatrices(resultados);
+            //Borra el fondo de CSS (pone display none)
+            resultados.classList.add('containerMatriz');
         }
     });
 
