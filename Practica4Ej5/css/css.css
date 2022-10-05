@@ -86,3 +86,23 @@ label{
 .containerMatriz {
     display: none;
 }
+
+#resultado0 {
+    width: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#resultado0 p {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+span {
+    border: black solid 1px;
+    padding: 0.5rem;
+    background-color: white;
+}

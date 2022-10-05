@@ -22,7 +22,7 @@ window.onload = function () {
             borrarMatrices(resultados)
             //Borra el fondo de CSS (pone display none)
             resultados.classList.add('containerMatriz');
-            matrices(numMatrices, 'sumando', sumandos);
+            matrices(numMatrices, 'sumando', sumandos, 'input');
             pintarTitulo('Sumandos', sumandos)
             activarSuma();
             //Le pone fondo de CSS (quita display none)
@@ -38,7 +38,7 @@ window.onload = function () {
     sumarMatrices.addEventListener('click', () => {
         if (comprobarInputs(sumandos)) {
             borrarMatrices(resultados);
-            matrices(1, 'resultado', resultados)
+            matrices(1, 'resultado', resultados, 'span')
             sumar();
             pintarTitulo('Resultado', resultados);
             //Le pone fondo de CSS (quita display none)
@@ -52,7 +52,7 @@ window.onload = function () {
 
 
 
-    function matrices(numeroMatrices, id, donde) {
+    function matrices(numeroMatrices, id, donde, tipoCelda) {
         for (i = 0; i < numeroMatrices; i++) {
             let matriz = document.createElement('div');
             matriz.setAttribute('id', `${id}${i}`);
@@ -62,9 +62,9 @@ window.onload = function () {
                 let parrafo = document.createElement('p');
 
                 for (k = 0; k < columnas; k++) {
-                    let input = document.createElement('input');
-                    input.setAttribute('type', 'text');
-                    parrafo.appendChild(input);
+                    let celda = document.createElement(tipoCelda);
+                    celda.setAttribute('type', 'text');
+                    parrafo.appendChild(celda);
                 }
 
                 matriz.appendChild(parrafo);
@@ -103,7 +103,7 @@ window.onload = function () {
                     suma += valor;
                 }
 
-                resultado.children[i].children[j].value = suma;
+                resultado.children[i].children[j].innerHTML = suma;
             }
         }
 
