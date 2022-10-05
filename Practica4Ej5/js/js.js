@@ -13,20 +13,25 @@ window.onload = function () {
     let numMatrices = parseInt(entrada3.value);
     let resultado;
 
-    sumarMatrices.setAttribute('disabled', '')
+    sumarMatrices.setAttribute('disabled', '');
 
     crearMatrices.addEventListener('click', () => {
-        if (comprobarInputs(entradas)) {
+        leerEntradas();
+        if (comprobarInputs(entradas) && filas > 0 && columnas > 0 && numMatrices > 0) {
             borrarMatrices(sumandos);
             borrarMatrices(resultados)
             //Borra el fondo de CSS (pone display none)
             resultados.classList.add('containerMatriz');
-            leerEntradas();
             matrices(numMatrices, 'sumando', sumandos);
             pintarTitulo('Sumandos', sumandos)
             activarSuma();
             //Le pone fondo de CSS (quita display none)
             sumandos.classList.remove('containerMatriz');
+        } else {
+            sumarMatrices.setAttribute('disabled', '');
+            borrarMatrices(sumandos);
+            //Borra el fondo de CSS (pone display none)
+            sumandos.classList.add('containerMatriz');
         }
     });
 
