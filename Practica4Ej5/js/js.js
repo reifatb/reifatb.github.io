@@ -60,17 +60,21 @@ window.onload = function () {
             let matriz = document.createElement('div');
             matriz.setAttribute('id', `${id}${i}`);
             matriz.setAttribute('class', 'matriz');
+            let tabla = document.createElement('table');
+            matriz.appendChild(tabla);
 
             for (j = 0; j < filas; j++) {
-                let parrafo = document.createElement('p');
+                let fila = document.createElement('tr');
 
                 for (k = 0; k < columnas; k++) {
+                    let columna = document.createElement('td');
                     let celda = document.createElement(tipoCelda);
                     celda.setAttribute('type', 'text');
-                    parrafo.appendChild(celda);
+                    columna.appendChild(celda);
+                    fila.appendChild(columna);
                 }
 
-                matriz.appendChild(parrafo);
+                tabla.appendChild(fila);
             }
 
             donde.appendChild(matriz);
@@ -101,12 +105,12 @@ window.onload = function () {
                 let suma = 0;
 
                 for (k = 0; k < sumMatriz.length; k++) {
-                    let valor = parseFloat(document.getElementById(`sumando${k}`).children[i].children[j].value);
+                    let valor = parseFloat(document.getElementById(`sumando${k}`).getElementsByTagName('tr')[i].getElementsByTagName('td')[j].children[0].value);
 
                     suma += valor;
                 }
 
-                resultado.children[i].children[j].innerHTML = suma;
+                resultado.getElementsByTagName('tr')[i].getElementsByTagName('td')[j].children[0].innerHTML = suma;
             }
         }
 
