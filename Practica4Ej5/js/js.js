@@ -32,6 +32,9 @@ window.onload = function () {
             borrarMatrices(sumandos);
             //Borra el fondo de CSS (pone display none)
             sumandos.classList.add('containerMatriz');
+            borrarMatrices(resultados)
+            //Borra el fondo de CSS (pone display none)
+            resultados.classList.add('containerMatriz');
         }
     });
 
