@@ -87,7 +87,7 @@ label{
     display: none;
 }
 
-#resultado0 {
+/* #resultado0 {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +99,14 @@ label{
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+} */
+
+tr {
+    height: 3rem;
+}
+
+td {
+    width: 4rem;
 }
 
 span {
