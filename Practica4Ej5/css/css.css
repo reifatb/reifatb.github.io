@@ -3,8 +3,9 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     background-color: rgb(172, 112, 228);
+    height: 100vh;
 }
 
 input {
@@ -64,7 +65,7 @@ label{
 #entradas, #sumandos, #resultados {
     border-radius: 25px;
     padding: 1.5rem;
-    margin: 0.5rem;
+    margin: 0;
 }
 
 #sumandos {
