@@ -8,6 +8,7 @@ body {
     height: 100vh;
 }
 
+
 input {
     
     width: 3rem;
@@ -34,6 +35,7 @@ label{
 .entrada {
     display: inline-block;
 }
+
 
 #botones {
     display: flex;
