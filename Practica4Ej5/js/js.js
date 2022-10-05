@@ -27,6 +27,7 @@ window.onload = function () {
             activarSuma();
             //Le pone fondo de CSS (quita display none)
             sumandos.classList.remove('containerMatriz');
+
         } else {
             sumarMatrices.setAttribute('disabled', '');
             borrarMatrices(sumandos);
@@ -46,6 +47,7 @@ window.onload = function () {
             pintarTitulo('Resultado', resultados);
             //Le pone fondo de CSS (quita display none)
             resultados.classList.remove('containerMatriz');
+
         } else {
             borrarMatrices(resultados);
             //Borra el fondo de CSS (pone display none)
