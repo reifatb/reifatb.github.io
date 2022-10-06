@@ -20,4 +20,10 @@
 
 #result {
     font-size: 5rem;
+    width: fit-content;
+    padding: 0;
+}
+
+.borde {
+    border-bottom: solid 4px;
 }

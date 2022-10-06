@@ -27,6 +27,12 @@ window.onload = function () {
                 parrafo.classList.remove(efectos[i].value);
 
             }
+
+            if (efectos[0].checked === true && efectos[4].checked === true) {
+                parrafo.classList.add('borde'); parrafo.classList.remove('subrayado');
+            } else {
+                parrafo.classList.remove('borde');
+            }
         }
     }
 
