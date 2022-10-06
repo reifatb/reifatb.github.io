@@ -1,0 +1,23 @@
+.tachado {
+    text-decoration: line-through;
+}
+
+.cursiva {
+    font-style: italic;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.versalita {
+    font-variant: small-caps;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+#result {
+    font-size: 5rem;
+}
