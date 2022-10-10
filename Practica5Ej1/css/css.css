@@ -1,4 +1,6 @@
 body {
-    background-color: rgb(154, 45, 255);
-    
+    /*background: rgb(154, 45, 255);*/
+    background: linear-gradient(rgb(154, 45, 255),rgb(160, 28, 28) 220%);
+    height: 100vh;
+    overflow: hidden;
 }
