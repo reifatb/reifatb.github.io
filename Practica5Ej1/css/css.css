@@ -1,11 +1,10 @@
 body {
-    /*background: rgb(154, 45, 255);*/
-    background: linear-gradient(rgb(154, 45, 255),rgb(160, 28, 28) 220%);
+    background: #937DC2;
+    /*background: linear-gradient(#937DC2,rgb(160, 28, 28) 220%);*/
     height: 100vh;
-    overflow: hidden;
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -14,8 +13,16 @@ body {
 }
 
 ol {
-    background-color: rgb(232, 255, 196);
-    padding: 3rem;
+    background-color: #FFABE1;
+    padding: 0 3rem;
     border-radius: 25px;
+    overflow: auto;
+    height: 50%;
 }
+
+li{
+    margin: 0.5rem 0;
+}
+
+
 
