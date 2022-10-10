@@ -2,7 +2,6 @@ window.onload = function () {
     const recuadro = document.getElementById('recuadro');
     const select = document.getElementsByTagName('select');
 
-
     addEvent();
     estilo();
 

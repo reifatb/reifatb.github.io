@@ -3,4 +3,19 @@ body {
     background: linear-gradient(rgb(154, 45, 255),rgb(160, 28, 28) 220%);
     height: 100vh;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+#recuadro {
+    width: 50%;
+}
+
+ol {
+    background-color: rgb(232, 255, 196);
+    padding: 3rem;
+    border-radius: 25px;
+}
+
