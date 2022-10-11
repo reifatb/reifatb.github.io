@@ -1,0 +1,36 @@
+body {
+display: flex;
+flex-direction: column;
+height: 50vh;
+justify-content: space-evenly;
+}
+
+.dia {
+    background-color: rgb(219, 219, 219);
+    margin: 0 3px;
+    width: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.hoy {
+    background-color: rgb(157, 157, 157);
+    color: blue;
+    font-weight: bold;
+}
+
+#fecha5 {
+    border: 2px solid grey;
+    width: fit-content;
+    text-align: center;
+}
+
+#fecha5 tr:nth-child(2n) {
+    background-color: rgb(0, 0, 211);
+    color: white;
+}
+
+#fecha5 tr:nth-child(2n+1) {
+    background-color: rgb(92, 92, 255);
+    color: black;
+}
