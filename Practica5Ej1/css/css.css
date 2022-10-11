@@ -10,7 +10,7 @@ body {
 }
 
 #recuadro {
-    width: 50%;
+    width: 75%;
 }
 
 div {
@@ -52,3 +52,10 @@ ol::-webkit-scrollbar-thumb
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #FFABE1;
 }
+
+ol {
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #fb5ac3 rgb(90, 0, 128);
+}
+
