@@ -2,19 +2,30 @@ body {
     display: flex;
     flex-direction: row;
     /*justify-content: space-around;*/
-    background-color: rgb(110, 43, 226);
+    background-color: rgb(161, 124, 224);
     padding: 5rem;
+    font-family: Sans-serif;
 }
 
 #entradas {
     margin: 0 10rem;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: rgb(110, 84, 154);
+    border: solid 3px white;
+    border-radius: 30px;
+    padding: 1rem;
+    height: 5rem
 }
 
 label {
     font-size: 2rem;
     color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 input {
@@ -22,6 +33,11 @@ input {
     padding: 5px;
     text-align: center;
     width: 50px;
+    color: white;
+    font-weight: bolder;
+    font-size: 1rem;
+    margin: 0 0 0 10px;
+    background-color: rgb(161, 124, 224);
 }
 
 #divCalendario {

@@ -7,8 +7,7 @@ window.onload = function () {
     const divCalendario = document.getElementById('divCalendario')
     let calendarioPrimerDia = new Date(anno.value, mes.value - 1);
     console.log(calendarioPrimerDia);
-    let calendarioUltimoDia = new Date(anno.value, mes.value, 0);
-    console.log(calendarioUltimoDia);
+
     const semana = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
 
 
@@ -18,6 +17,7 @@ window.onload = function () {
     }
 
     function calendar() {
+        let calendarioUltimoDia = new Date(anno.value, mes.value, 0);
         divCalendario.innerHTML = '';
         let dia = 1;
         const tabla = document.createElement('table');
@@ -33,6 +33,7 @@ window.onload = function () {
         }
 
         for (i = 1; i <= getWeekNumOfMonthOfDate(calendarioUltimoDia); i++) {
+            console.log(getWeekNumOfMonthOfDate(calendarioUltimoDia));
             let fila = document.createElement('tr');
             tabla.appendChild(fila);
 
@@ -56,6 +57,7 @@ window.onload = function () {
     calendar();
 
     anno.addEventListener('keyup', calendar);
+    mes.addEventListener('keyup', calendar);
 
     // const weekNumOfDate = getWeekNumOfMonthOfDate(new Date(2022, 1, 20))
     // console.log(weekNumOfDate)
