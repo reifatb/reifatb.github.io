@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: row;
+    /*justify-content: space-around;*/
+    background-color: rgb(110, 43, 226);
+    padding: 5rem;
+}
+
+#entradas {
+    margin: 0 10rem;
+}
+
+#divCalendario {
+    background-color: blanchedalmond;
+    border-radius: 30px;
+    padding: 1rem;
+}
+
+#divCalendario td {
+    width: 30px;
+    height: 30px;
+    border: solid 1px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#divCalendario td:hover {
+    background-color: rgb(42, 138, 50);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#divCalendario td p {
+    text-align: center;
+}
+
+#divCalendario,
+#divCalendario * {
+    margin: 0;
+}
+
+#divCalendario tr:nth-child(1) td {
+    background-color: #ffb350;
+}
