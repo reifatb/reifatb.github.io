@@ -8,6 +8,20 @@ body {
 
 #entradas {
     margin: 0 10rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 2rem;
+    color: white;
+}
+
+input {
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    width: 50px;
 }
 
 #divCalendario {
@@ -25,10 +39,11 @@ body {
 }
 
 #divCalendario td:hover {
-    background-color: rgb(42, 138, 50);
+    background-color: rgb(95, 192, 100);
     color: white;
     font-weight: bold;
     cursor: pointer;
+    border: solid 1px rgb(195, 80, 80);
 }
 
 #divCalendario td p {
