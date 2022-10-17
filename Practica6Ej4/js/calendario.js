@@ -1,47 +1,59 @@
 window.onload = function () {
-    const fecha = new Date();
+    //<- Calendario
+    const hoy = new Date();
     const anno = document.getElementById('anno');
     const mes = document.getElementById('mes');
-    anno.value = fecha.getFullYear();
-    mes.value = fecha.getMonth() + 1;
+    anno.value = hoy.getFullYear();
+    mes.value = hoy.getMonth() + 1;
     const divCalendario = document.getElementById('divCalendario')
-    let calendarioPrimerDia = new Date(anno.value, mes.value - 1);
-    console.log(calendarioPrimerDia);
-
     const semana = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+    const numDiasSemana = 7;
+    //Calendario ->
 
-
-    const getWeekNumOfMonthOfDate = (d) => {
-        const firstDay = new Date(d.getFullYear(), d.getMonth(), 1).getDay();
-        return Math.ceil((d.getDate() + (firstDay - 1)) / 7);
-    }
+    //<- Agenda
+    const agenda = new Array();
+    const containerAgenda = document.getElementById('containerAgenda');
+    const divAgenda = document.getElementById('divAgenda');
+    let dias;
+    let diaSelect;
+    const buttonCreateEvent = document.createElement('button');
+    buttonCreateEvent.innerText = 'Agendar Evento';
+    buttonCreateEvent.classList.add('button');
+    buttonCreateEvent.addEventListener('click', () => { openForm(form) });
+    containerAgenda.appendChild(buttonCreateEvent);
+    const form = document.createElement('form');
+    //Agenda ->
 
     function calendar() {
-        let calendarioUltimoDia = new Date(anno.value, mes.value, 0);
         divCalendario.innerHTML = '';
         let dia = 1;
         const tabla = document.createElement('table');
         const filaSemana = document.createElement('tr');
         tabla.appendChild(filaSemana);
 
-        for (i = 1; i < 8; i++) {
-            let columna = document.createElement('td');
+        for (let i = 1; i < 8; i++) {
+            let columna = document.createElement('th');
             filaSemana.appendChild(columna);
-            let p = document.createElement('p');
-            columna.appendChild(p);
-            p.textContent = semana[i - 1];
+            columna.textContent = semana[i - 1];
         }
 
-        for (i = 1; i <= getWeekNumOfMonthOfDate(calendarioUltimoDia); i++) {
-            console.log(getWeekNumOfMonthOfDate(calendarioUltimoDia));
+        const numSemanasMes = getNumSemanasMes(anno.value, mes.value);
+
+        for (let numSemanaMes = 1; numSemanaMes <= numSemanasMes; numSemanaMes++) {
             let fila = document.createElement('tr');
             tabla.appendChild(fila);
 
-            for (j = 1; j < 8; j++) {
+            for (let numDiaSemana = 1; numDiaSemana <= numDiasSemana; numDiaSemana++) {
                 let columna = document.createElement('td');
                 fila.appendChild(columna);
 
-                if ((j === new Date(anno.value, mes.value - 1, dia).getDay() || (j === 7 && new Date(anno.value, mes.value - 1, dia).getDay()) === 0) && dia <= new Date(anno.value, mes.value, 0).getDate()) {
+                const fechaActual = new Date(anno.value, mes.value - 1, dia);
+                const numDiaSemanaActual = fechaActual.getDay();
+                const diaActual = fechaActual.getDate();
+                const esDomingo = numDiaSemanaActual === 0;
+                const esUltimaColumna = numDiaSemana === numDiasSemana;
+
+                if ((numDiaSemana === numDiaSemanaActual || (esUltimaColumna && esDomingo)) && dia <= diaActual) {
                     let p = document.createElement('p');
                     columna.appendChild(p);
                     p.textContent = dia;
@@ -52,14 +64,91 @@ window.onload = function () {
 
         }
         divCalendario.appendChild(tabla);
+        dias = document.querySelectorAll('td p');
+        clicarDias();
     }
 
     calendar();
+    containerAgenda.classList.add('containerNone');
+    containerAgenda.setAttribute('id', '');
 
     anno.addEventListener('keyup', calendar);
     mes.addEventListener('keyup', calendar);
 
-    // const weekNumOfDate = getWeekNumOfMonthOfDate(new Date(2022, 1, 20))
-    // console.log(weekNumOfDate)
+    function clicarDias() {
+        for (let i = 0; i < dias.length; i++) {
+            dias[i].addEventListener('click', () => {
+                diaSelect = new Date(anno.value, mes.value - 1, i + 1);
+                abrirAgenda();
+            });
+        }
+    }
 
+    function abrirAgenda() {
+        divAgenda.innerHTML = '';
+        const p = document.createElement('p');
+        const opcionesFecha = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const fechaActual = diaSelect.toLocaleDateString("es-ES", opcionesFecha);
+        const fechaPrimeraMayus = primeraMayus(fechaActual);
+        p.textContent = fechaPrimeraMayus;
+        divAgenda.appendChild(p);
+        const ul = document.createElement('ul');
+        divAgenda.appendChild(ul);
+
+        for (let i = 0; agenda.length; i++) {
+            console.log(agenda)
+            const milisecEvent = agenda[i][0].getTime();
+            const milisecDiaSelect = diaSelect.getTime()
+
+            if (milisecEvent === milisecDiaSelect) {
+                const li = document.createElement('li');
+                ul.appendChild(li);
+                li.textContent = agenda[i][1];
+            }
+        }
+
+        divAgenda.appendChild(form);
+
+        containerAgenda.classList.remove('containerNone')
+        containerAgenda.setAttribute('id', 'containerAgenda')
+    }
+
+    function primeraMayus(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+    }
+
+    function openForm(form) {
+        form.innerHTML = '';
+        const textarea = document.createElement('textarea');
+        textarea.setAttribute('placeholder', 'Nuevo evento');
+        form.appendChild(textarea);
+        const newEvent = document.createElement('button');
+        newEvent.innerText = 'Nuevo Evento';
+        newEvent.classList.add('button');
+        newEvent.addEventListener('click', (e) => {
+            e.preventDefault();
+            crearEvento(textarea.value)
+            console.log(agenda[0][0].getTime());
+            calendar();
+        });
+        form.appendChild(newEvent);
+    }
+
+    function crearEvento(str) {
+        const fecha = diaSelect;
+        const evento = [diaSelect, str];
+        agenda.push(evento);
+    }
+
+    function getNumSemanaMes(d) {
+        const firstDay = new Date(d.getFullYear(), d.getMonth(), 1).getDay();
+        return Math.ceil((d.getDate() + (firstDay - 1)) / 7);
+    }
+
+    function getUltimoDiaMes(anno, mes) { return new Date(anno, mes, 0); }
+    function getNumSemanasMes(anno, mes) {
+        const ultimoDiaMes = getUltimoDiaMes(anno, mes);
+        const numSemanasMes = getNumSemanaMes(ultimoDiaMes);
+        return numSemanasMes;
+    }
 }

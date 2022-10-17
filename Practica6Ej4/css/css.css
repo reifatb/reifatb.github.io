@@ -13,8 +13,10 @@ body {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    width: 30%;
-    min-width: 440px;
+    width: 45%;
+    min-width: 330px;
+    min-height: 300px;
+    max-height: 500px;
 }
 
 #entradas {
@@ -50,13 +52,29 @@ input {
     background-color: rgb(161, 124, 224);
 }
 
+#containerAgenda {
+    background-color: rgb(245, 255, 109);
+    padding: 0.75rem;
+    width: 254px;
+    margin-top: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.containerNone {
+    display: none;
+}
+
 #divCalendario {
     background-color: blanchedalmond;
     border-radius: 30px;
     padding: 1rem;
 }
 
-#divCalendario td {
+#divCalendario td,
+#divCalendario th {
     width: 30px;
     height: 30px;
     border: solid 1px;
@@ -65,7 +83,7 @@ input {
 }
 
 #divCalendario td:hover {
-    background-color: rgb(95, 192, 100);
+    background-color: rgb(110, 219, 115);
     color: white;
     font-weight: bold;
     cursor: pointer;
@@ -81,10 +99,46 @@ input {
     margin: 0;
 }
 
-#divCalendario tr:nth-child(1) td {
+#divCalendario th {
     background-color: #ffb350;
 }
 
-#containerAgenda {
-    width: 30%;
+
+.button {
+    border: none;
+    height: 2rem;
+    width: 10rem;
+    background-color: #ABD9FF;
+    box-shadow: 0 5px 0px #ABD9FF;
+    border-bottom: 2px solid #2493ee;
+    border-radius: 10px;
+    color: #2493ee;
+    font-weight: bolder;
+    align-self: flex-end;
 }
+
+.button:active {
+    transform: translateY(5px);
+    border-bottom-width: 2px;
+    box-shadow: none;
+}
+
+/*@media (hover: hover) {
+    .button:hover {
+        box-shadow: 0 3px 0px #ABD9FF;
+        outline: none;
+        transform: translateY(2px);
+    }
+
+    .button:focus {
+        outline: none;
+        text-decoration: none;
+    }
+
+    .button:active {
+        transform: translateY(5px);
+        border-bottom-width: 2px;
+        box-shadow: none;
+    }
+}*/
+
