@@ -102,8 +102,14 @@ input {
     background-color: #ffb350;
 }
 
-#divAgendada p {
-    text-align: center;
+#divAgenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#divAgenda p {
+    align-self: center;
 }
 
 .button {
@@ -127,6 +133,14 @@ input {
 
 li {
     list-style-type: square;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    width: 80%;
+}
+
+.diaConEvento{
+    color: red;
+    font-weight: bold;
 }
 
 @media (hover: hover) {

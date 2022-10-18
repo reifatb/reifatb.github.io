@@ -58,7 +58,14 @@ window.onload = function () {
                     columna.appendChild(p);
                     p.textContent = dia;
                     dia++;
+
+                    for (let i = 0; i < agenda.length; i++) {
+                        if (fechaActual.getTime() === agenda[i][0].getTime()) {
+                            p.classList.add('diaConEvento');
+                        }
+                    }
                 }
+
 
             }
 
@@ -129,6 +136,7 @@ window.onload = function () {
             e.preventDefault();
             crearEvento(textarea.value);
             abrirAgenda();
+            calendar();
         });
         form.appendChild(newEvent);
     }
