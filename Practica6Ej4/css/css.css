@@ -125,6 +125,10 @@ input {
     box-shadow: none;
 }
 
+li {
+    list-style-type: square;
+}
+
 @media (hover: hover) {
     .button:hover {
         box-shadow: 0 3px 0px #ABD9FF;
