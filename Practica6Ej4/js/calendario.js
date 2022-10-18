@@ -95,12 +95,11 @@ window.onload = function () {
         const ul = document.createElement('ul');
         divAgenda.appendChild(ul);
 
-        for (let i = 0; agenda.length; i++) {
-            console.log(agenda[i][0]);
-            //const milisecEvent = agenda[i][0].getTime();
+        for (let i = 0; i < agenda.length; i++) {
+            const milisecEvent = agenda[i][0].getTime();
             const milisecDiaSelect = diaSelect.getTime();
 
-            if (agenda[i][0] === milisecDiaSelect) {
+            if (milisecEvent === milisecDiaSelect) {
                 const li = document.createElement('li');
                 ul.appendChild(li);
                 li.textContent = agenda[i][1];
@@ -111,6 +110,7 @@ window.onload = function () {
 
         containerAgenda.classList.remove('containerNone')
         containerAgenda.setAttribute('id', 'containerAgenda')
+        form.innerHTML = '';
     }
 
     function primeraMayus(str) {
@@ -134,7 +134,7 @@ window.onload = function () {
     }
 
     function crearEvento(str) {
-        const evento = [diaSelect.getTime(), str];
+        const evento = [diaSelect, str];
         agenda.push(evento);
     }
 
