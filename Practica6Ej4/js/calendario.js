@@ -8,6 +8,7 @@ window.onload = function () {
     const divCalendario = document.getElementById('divCalendario')
     const semana = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
     const numDiasSemana = 7;
+    const regExNumber = /\d/;
     //Calendario ->
 
     //<- Agenda
@@ -79,8 +80,26 @@ window.onload = function () {
     containerAgenda.classList.add('containerNone');
     containerAgenda.setAttribute('id', '');
 
-    anno.addEventListener('keyup', calendar);
-    mes.addEventListener('keyup', calendar);
+    anno.addEventListener('keypress', e => {
+        e.preventDefault();
+        if (regExNumber.test(e.key)) {
+            if (isTextSelected()) {
+                anno.value = e.key
+            } else {
+                anno.value += e.key;
+            }
+            calendar();
+        }
+
+    });
+
+    mes.addEventListener('keypress', e => {
+        e.preventDefault();
+        if (regExNumber.test(e.key)) {
+            mes.value += e.key;
+            calendar();
+        }
+    });
 
     function clicarDias() {
         for (let i = 0; i < dias.length; i++) {
@@ -156,6 +175,12 @@ window.onload = function () {
         const ultimoDiaMes = getUltimoDiaMes(anno, mes);
         const numSemanasMes = getNumSemanaMes(ultimoDiaMes);
         return numSemanasMes;
+    }
+
+    //https://dirask.com/posts/JavaScript-check-if-any-text-on-web-page-is-selected-with-caret-j8VwmD
+    function isTextSelected() {
+        var selection = window.getSelection();
+        return selection && selection.type === 'Range';
     }
 
 }
