@@ -16,12 +16,12 @@ window.onload = function () {
     const divAgenda = document.getElementById('divAgenda');
     let dias;
     let diaSelect;
+    const form = document.createElement('form');
     const buttonCreateEvent = document.createElement('button');
     buttonCreateEvent.innerText = 'Agendar Evento';
     buttonCreateEvent.classList.add('button');
     buttonCreateEvent.addEventListener('click', () => { openForm(form) });
     containerAgenda.appendChild(buttonCreateEvent);
-    const form = document.createElement('form');
     //Agenda ->
 
     function calendar() {
@@ -96,11 +96,11 @@ window.onload = function () {
         divAgenda.appendChild(ul);
 
         for (let i = 0; agenda.length; i++) {
-            console.log(agenda)
-            const milisecEvent = agenda[i][0].getTime();
-            const milisecDiaSelect = diaSelect.getTime()
+            console.log(agenda[i][0]);
+            //const milisecEvent = agenda[i][0].getTime();
+            const milisecDiaSelect = diaSelect.getTime();
 
-            if (milisecEvent === milisecDiaSelect) {
+            if (agenda[i][0] === milisecDiaSelect) {
                 const li = document.createElement('li');
                 ul.appendChild(li);
                 li.textContent = agenda[i][1];
@@ -127,16 +127,14 @@ window.onload = function () {
         newEvent.classList.add('button');
         newEvent.addEventListener('click', (e) => {
             e.preventDefault();
-            crearEvento(textarea.value)
-            console.log(agenda[0][0].getTime());
-            calendar();
+            crearEvento(textarea.value);
+            abrirAgenda();
         });
         form.appendChild(newEvent);
     }
 
     function crearEvento(str) {
-        const fecha = diaSelect;
-        const evento = [diaSelect, str];
+        const evento = [diaSelect.getTime(), str];
         agenda.push(evento);
     }
 
@@ -151,4 +149,5 @@ window.onload = function () {
         const numSemanasMes = getNumSemanaMes(ultimoDiaMes);
         return numSemanasMes;
     }
+
 }
