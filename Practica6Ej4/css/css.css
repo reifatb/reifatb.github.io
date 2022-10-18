@@ -30,6 +30,9 @@ body {
     padding: 1rem;
     height: 5rem;
     margin: 1rem 0;
+    -webkit-box-shadow: 0 10px 30px -6px #777;
+    -moz-box-shadow: 0 10px 30px -6px #777;
+    box-shadow: 0 10px 30px -6px #777;
 }
 
 label {
@@ -60,6 +63,9 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
 }
 
 .containerNone {
@@ -70,6 +76,9 @@ input {
     background-color: blanchedalmond;
     border-radius: 30px;
     padding: 1rem;
+    -webkit-box-shadow: 0 10px 30px -6px #777;
+    -moz-box-shadow: 0 10px 30px -6px #777;
+    box-shadow: 0 10px 30px -6px #777;
 }
 
 #divCalendario td,
@@ -138,7 +147,7 @@ li {
     width: 80%;
 }
 
-.diaConEvento{
+.diaConEvento {
     color: red;
     font-weight: bold;
 }
@@ -162,3 +171,12 @@ li {
     }
 }
 
+@media screen and (min-width: 850px) {
+    body {
+        justify-content: flex-start;
+    }
+
+    #containerCalendario {
+        margin-left: 14%;
+    }
+}
