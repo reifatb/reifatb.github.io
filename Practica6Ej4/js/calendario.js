@@ -120,6 +120,7 @@ window.onload = function () {
         divAgenda.appendChild(p);
         const ul = document.createElement('ul');
         divAgenda.appendChild(ul);
+        const xCloseSymbols = document.querySelectorAll('li span');
 
         for (let i = 0; i < agenda.length; i++) {
             const milisecEvent = agenda[i][0].getTime();
@@ -128,8 +129,24 @@ window.onload = function () {
             if (milisecEvent === milisecDiaSelect) {
                 const li = document.createElement('li');
                 ul.appendChild(li);
-                li.textContent = agenda[i][1];
+                const liDiv = document.createElement('div');
+                li.appendChild(liDiv);
+                const liP = document.createElement('p');
+                liDiv.append(liP);
+                liP.textContent = agenda[i][1];
+                const span = document.createElement('span');
+                span.innerHTML = '&#10006';
+                liDiv.appendChild(span);
+                span.addEventListener('click', () => {
+                    li.remove();
+                    agenda.splice(i, 1);
+                    calendar();
+                })
             }
+        }
+
+
+        for (let i = 0; i < xCloseSymbols.length; i++) {
         }
 
         divAgenda.appendChild(form);

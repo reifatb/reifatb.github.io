@@ -143,9 +143,25 @@ input {
 
 li {
     list-style-type: square;
-    border-bottom: 1px solid;
     margin-top: 10px;
     width: 80%;
+}
+
+li div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li p {
+    margin: 0;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+
+li span {
+    height: 100%;
+    margin-left: 10px;
 }
 
 .diaConEvento {
