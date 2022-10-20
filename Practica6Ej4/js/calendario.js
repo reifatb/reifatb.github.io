@@ -159,6 +159,7 @@ window.onload = function () {
         const textarea = document.createElement('textarea');
         textarea.setAttribute('placeholder', 'Nuevo evento');
         form.appendChild(textarea);
+        textarea.focus();
         const newEvent = document.createElement('button');
         newEvent.innerText = 'Nuevo Evento';
         newEvent.classList.add('button');
