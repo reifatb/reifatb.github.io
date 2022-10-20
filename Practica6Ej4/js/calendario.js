@@ -93,13 +93,7 @@ window.onload = function () {
 
     });
 
-    mes.addEventListener('keypress', e => {
-        e.preventDefault();
-        if (regExNumber.test(e.key)) {
-            mes.value += e.key;
-            calendar();
-        }
-    });
+    mes.addEventListener('keypress', calendar);
 
     function clicarDias() {
         for (let i = 0; i < dias.length; i++) {
