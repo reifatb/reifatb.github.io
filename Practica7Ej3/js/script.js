@@ -3,7 +3,7 @@ window.onload = function () {
     const textarea = document.getElementById('textarea');
     const events = ['mousedown', 'mouseup', 'click', 'contextmenu', 'dblclick', 'mouseover'];
 
-    addEvents();
+    //addEvents();
 
     function writeTextarea(element) {
         textarea.value += `${element}\n`;
