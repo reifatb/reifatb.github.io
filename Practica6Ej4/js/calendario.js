@@ -8,7 +8,6 @@ window.onload = function () {
     const divCalendario = document.getElementById('divCalendario')
     const semana = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
     const numDiasSemana = 7;
-    const regExNumber = /\d/;
     //Calendario ->
 
     //<- Agenda
@@ -87,20 +86,8 @@ window.onload = function () {
     containerAgenda.classList.add('containerNone');
     containerAgenda.setAttribute('id', '');
 
-    anno.addEventListener('keypress', e => {
-        e.preventDefault();
-        if (regExNumber.test(e.key)) {
-            if (isTextSelected()) {
-                anno.value = e.key
-            } else {
-                anno.value += e.key;
-            }
-            calendar();
-        }
-
-    });
-
-    mes.addEventListener('keypress', calendar);
+    anno.addEventListener('keyup', calendar);
+    mes.addEventListener('keyup', calendar);
 
     //Cuando se clica en un día se almacena esa fecha y se muestra la agenda
     function clicarDias() {
