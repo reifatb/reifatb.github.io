@@ -10,12 +10,12 @@ window.onload = function () {
     }
 
     //caso 1
-    function addEvents() {
-        for (element of events) {
-            button1.addEventListener(element, () => { writeTextarea(element) });
-            console.log(element);
-        }
-    }
+    // function addEvents() {
+    //     for (element of events) {
+    //         button1.addEventListener(element, () => { writeTextarea(element) });
+    //         console.log(element);
+    //     }
+    // }
 
 
     //caso 2
@@ -28,6 +28,6 @@ window.onload = function () {
 
 
     //caso 3
-    // events.forEach(e => button1.addEventListener(e, () => { writeTextarea(e) }))
+    events.forEach(e => button1.addEventListener(e, () => { writeTextarea(e) }))
 
 }
