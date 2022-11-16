@@ -1,0 +1,5 @@
+textarea[disabled="true"] {
+    color: black;
+    border: none;
+    resize: none;
+}

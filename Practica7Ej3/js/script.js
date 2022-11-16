@@ -3,19 +3,19 @@ window.onload = function () {
     const textarea = document.getElementById('textarea');
     const events = ['mousedown', 'mouseup', 'click', 'contextmenu', 'dblclick', 'mouseover'];
 
-    //addEvents();
+    addEvents();
 
     function writeTextarea(element) {
         textarea.value += `${element}\n`;
     }
 
     //caso 1
-    // function addEvents() {
-    //     for (element of events) {
-    //         button1.addEventListener(element, () => { writeTextarea(element) });
-    //         console.log(element);
-    //     }
-    // }
+    function addEvents() {
+        for (let element of events) {
+            button1.addEventListener(element, () => { writeTextarea(element) });
+            console.log(element);
+        }
+    }
 
 
     //caso 2
@@ -28,6 +28,6 @@ window.onload = function () {
 
 
     //caso 3
-    events.forEach(e => button1.addEventListener(e, () => { writeTextarea(e) }))
+    // events.forEach(e => button1.addEventListener(e, () => { writeTextarea(e) }))
 
 }

@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.car {
+    --size: 10%;
+    width: var(--size);
+    height: var(--size);
+    border: 1px solid black;
+    position: absolute;
+    left: 0px;
+}
+
+button {
+    position: relative;
+    top: 50vh;
+}
+
+.running {
+    --animdur: 3s;
+    --animn: run;
+}
+
+@keyframes run {
+    from {
+        margin-left: 0%;
+    }
+
+    to {
+        margin-left: calc(100% - var(--w, 150px));
+    }
+}
