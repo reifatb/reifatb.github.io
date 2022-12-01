@@ -1,8 +1,9 @@
 window.addEventListener('DOMContentLoaded', () => {
     const connect4 = document.getElementById('connect4');
-    const table = document.getElementById('table');
     const turnTrueRegex = /XXXX/;
     const turnFalseRegex = /OOOO/;
+    const winnerP = document.getElementById('winner');
+    const newgameButton = document.getElementById('newGameButton');
     let turn = true;
     let selectedCol;
     let selectedRow;
@@ -12,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
     let diagonals2 = new Array();
 
     function fillTable() {
+        const table = document.createElement('table');
+        table.setAttribute('id', 'table');
+        connect4.appendChild(table);
         for (let i = 0; i < 6; i++) {
             const row = document.createElement('tr');
             row.setAttribute('id', i);
@@ -166,11 +170,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function checkWinner() {
         if (winner) {
-            alert("Winner")
+            // alert("Winner");
             const cells = document.getElementsByTagName('td');
             for (let cell of cells) {
                 cell.removeEventListener('click', gameLogic);
             }
+
+            winnerP.innerText = turn ? '¡AMARILLAS GANAN!' : '¡ROJAS GANAN!';
+            winnerP.style.color = turn ? 'yellow' : 'red';
         }
     }
 
@@ -204,10 +211,16 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     function gameOn() {
+        winner = false;
+        turn = true;
+        connect4.innerHTML = '';
         fillTable();
         cellClick();
+        winnerP.innerText = '';
     }
 
     gameOn();
+
+    newgameButton.addEventListener('click', gameOn);
 
 });
