@@ -74,6 +74,8 @@ window.addEventListener('DOMContentLoaded', () => {
     function draw() {
         if (selectedCell) {
             turn ? selectedCell.innerText = 'X' : selectedCell.innerText = 'O';
+            createChip();
+
             turn ? turn = false : turn = true;
         }
     }
@@ -170,6 +172,19 @@ window.addEventListener('DOMContentLoaded', () => {
                 cell.removeEventListener('click', gameLogic);
             }
         }
+    }
+
+    function createChip() {
+        const left = selectedCell.offsetLeft;
+        const top = selectedCell.offsetTop;
+        const chip = document.createElement('div');
+        chip.classList.add('chip');
+        turn ? chip.classList.add('red') : chip.classList.add('yellow');
+        chip.style.position = 'absolute';
+        chip.style.left = (left + 2) + 'px';
+        chip.style.top = (top + 2) + 'px';
+
+        table.appendChild(chip);
     }
 
     function gameLogic() {

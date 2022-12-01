@@ -1,6 +1,8 @@
 table {
     position: absolute;
-    background-color: rgb(0, 0, 202);
+    background-image: url(img/Captura\ de\ pantalla\ 2022-12-01\ a\ las\ 13.44.51.png);
+    /* background-color: rgb(0, 0, 202); */
+    z-index: -1;
 }
 
 td {
@@ -9,11 +11,26 @@ td {
     width: 50px;
     height: 50px;
     position: relative;
-    /* z-index: -1; */
+    z-index: 1;
     transition: top 0.5s;
     background-color: white;
 }
 
 .falling {
     top: 0;
+}
+
+.chip {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 5;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
 }
