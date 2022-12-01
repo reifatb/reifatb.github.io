@@ -14,10 +14,21 @@ td {
     z-index: 1;
     transition: top 0.5s;
     background-color: white;
+    color: white;
 }
 
 .falling {
-    top: 0;
+    animation: fall 0.2s ease-in;
+}
+
+@keyframes fall {
+    from {
+        top: 0;
+    }
+
+    to {
+        top: var(--top);
+    }
 }
 
 .chip {

@@ -183,6 +183,8 @@ window.addEventListener('DOMContentLoaded', () => {
         chip.style.position = 'absolute';
         chip.style.left = (left + 2) + 'px';
         chip.style.top = (top + 2) + 'px';
+        document.documentElement.style.setProperty('--top', top + 'px')
+        chip.classList.add('falling');
 
         table.appendChild(chip);
     }
