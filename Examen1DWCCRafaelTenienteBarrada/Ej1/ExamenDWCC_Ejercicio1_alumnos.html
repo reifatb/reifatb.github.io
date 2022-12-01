@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Ejercicio DOM, Eventos y funciones</title>
+		
+		<style>
+			.caja{
+				width: 80px;
+				height: 80px;
+				float: left;
+				margin: 5px;
+				background:blueviolet;
+				bottom: auto;
+				color:white;
+				text-align:center;
+				font-size: 20px;
+			}
+			.naranja{
+				background: orangered;
+			}
+			.amarillo{
+				background: rgb(217, 255, 0);
+			}
+
+			.roja{
+				background: rgb(250, 3, 3);
+			}
+			.verde
+			{
+				background: rgb(3, 250, 168);
+			}
+			.seccion{
+				margin:20px;
+			}
+
+			.box{
+				width: 400px;
+				height: 450px;
+				float: left;
+				margin: 20px;
+			}
+			li,ul{
+				list-style: none;
+				margin: 10px;
+			}
+			
+		</style>
+		<script type="text/javascript" src="Examen_ejercicio1.js"></script>
+		</head>
+	<body>
+		
+		<h1>Ejercicio creacion elementos DOm</h1>
+
+		<div class="box">
+			<form action="#" method="POST" id="formulario" onsubmit="return false;">
+				<ul>
+					<li>
+						<label for="numero">Numero:</label> 
+						<input type="number" id="cantidad" name="cantidad" min="1" max="100"/>
+						<input type="button" value="Crear" id="crear" name="crear" />
+						<li>
+							<input type="button" value="Circulo" id="circulo" name="circulo" />
+						</li>
+					
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<label for="numero">Numero:</label> 
+						<input type="number" id="numero" name="numero" min="1" max="10"/>
+						<input type="button" value="Borrar" id="borrar" name="borrar" />
+					</li>
+
+				</ul>
+			
+				<ul>
+					<li>
+						<label for="numero">Numero:</label> 
+						<input type="number" id="numeroAnterior" name="numeroAnterior" min="1" max="1o"/>
+						<input type="button" value="Antes" id="antes" name="antes" />
+					</li>
+				</ul>	
+				
+				<ul>
+					<li>
+						<label for="numero">Numero:</label> 
+						<input type="number" id="numeroPosterior" name="numeroPosterior" min="1" max="10"/>
+						<input type="button" value="Despues" id="despues" name="despues" />
+					</li>
+				</ul>	
+						
+			</form>
+			<div class="seccion" id="seccion">
+			
+			</div>
+		</div>
+
+		
+      
+	</body>
+</html>
