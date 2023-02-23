@@ -40,10 +40,12 @@ window.addEventListener("DOMContentLoaded", () => {
 
     circleForm.addEventListener('submit', e => {
         e.preventDefault();
-        const ctxcircleCanvas = circleCanvas.getContext("2d");
-        ctxcircleCanvas.fillStyle = circleColor.value
+        const ctxCircleCanvas = circleCanvas.getContext("2d");
+        ctxCircleCanvas.fillStyle = 'blue'
+        ctxCircleCanvas.clearRect(0, 0, 250, 250);
+        ctxCircleCanvas.fillStyle = circleColor.value
         const circle = new Circulo(circleRadius.value, circleCanvas.getAttribute('width'));
-        circle.dibujar(ctxcircleCanvas);
+        circle.dibujar(ctxCircleCanvas);
         console.log(circle)
     });
 
