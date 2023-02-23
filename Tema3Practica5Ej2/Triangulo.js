@@ -9,8 +9,8 @@ class Triangulo extends Forma {
         this.x1 = x;
         this.x2 = this.mitadLadoLienzo - (lado / 2);
         this.x3 = this.mitadLadoLienzo + (lado / 2);
-        this.y1 = this.mitadLadoLienzo - ((2 / 3) * 2 * Math.sqrt(3) * lado);
-        this.y2 = this.mitadLadoLienzo - ((2 / 3) * 2 * Math.sqrt(3) * lado) + 2 * Math.sqrt(3) * lado;
+        this.y1 = this.mitadLadoLienzo - ((2 / 3) * (1 / 2) * Math.sqrt(3) * lado);
+        this.y2 = this.mitadLadoLienzo - ((2 / 3) * (1 / 2) * Math.sqrt(3) * lado) + (1 / 2) * Math.sqrt(3) * lado;
         this.y3 = this.y2;
     }
 

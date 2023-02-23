@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
     const triangleColor = document.getElementById('triangleColor');
 
     const circleCanvas = document.getElementById("circleCanvas");
-    const circleSize = document.getElementById('circleSize');
+    const circleRadius = document.getElementById('circleRadius');
     const circleForm = document.getElementById('circleForm');
     const circleColor = document.getElementById('circleColor');
 
@@ -42,8 +42,9 @@ window.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         const ctxcircleCanvas = circleCanvas.getContext("2d");
         ctxcircleCanvas.fillStyle = circleColor.value
-        const circle = new Circulo(circleSize.value, circleCanvas.getAttribute('width'));
+        const circle = new Circulo(circleRadius.value, circleCanvas.getAttribute('width'));
         circle.dibujar(ctxcircleCanvas);
+        console.log(circle)
     });
 
 });

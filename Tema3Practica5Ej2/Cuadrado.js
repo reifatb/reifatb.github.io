@@ -8,7 +8,7 @@ class Cuadrado extends Forma {
     }
 
     dibujar(ctx) {
-        return ctx.fillRect(this.centro.x, this.centro.y, this.lado, this.lado);
+        ctx.fillRect(this.centro.x, this.centro.y, this.lado, this.lado);
     }
 }
 
