@@ -4,11 +4,11 @@ class Cuadrado extends Forma {
         this.lado = lado;
         const x = (ladoLienzo - lado) / 2;
         const y = x;
-        this.centro = new Punto(x, y);
+        this.center = new Punto(x, y);
     }
 
     dibujar(ctx) {
-        ctx.fillRect(this.centro.x, this.centro.y, this.lado, this.lado);
+        ctx.fillRect(this.center.x, this.center.y, this.lado, this.lado);
     }
 }
 

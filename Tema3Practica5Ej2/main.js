@@ -1,19 +1,27 @@
 window.addEventListener("DOMContentLoaded", () => {
+    const squareDiv = document.getElementById('squareDiv');
     const squareCanvas = document.getElementById("squareCanvas");
     const squareSize = document.getElementById('squareSize');
     const squareForm = document.getElementById('squareForm');
     const squareColor = document.getElementById('squareColor');
 
+    const triangleDiv = document.getElementById('triangleDiv');
     const triangleCanvas = document.getElementById("triangleCanvas");
     const triangleSize = document.getElementById('triangleSize');
     const triangleForm = document.getElementById('triangleForm');
     const triangleColor = document.getElementById('triangleColor');
 
+    const circleDiv = document.getElementById('circleDiv');
     const circleCanvas = document.getElementById("circleCanvas");
     const circleRadius = document.getElementById('circleRadius');
     const circleForm = document.getElementById('circleForm');
     const circleColor = document.getElementById('circleColor');
 
+    const circle = document.getElementById('circle');
+
+    squareDiv.style.display = "none";
+    triangleDiv.style.display = "none";
+    circleDiv.style.display = "none";
 
     squareCanvas.setAttribute('width', `250`);
     squareCanvas.setAttribute('height', `250`);
@@ -41,12 +49,24 @@ window.addEventListener("DOMContentLoaded", () => {
     circleForm.addEventListener('submit', e => {
         e.preventDefault();
         const ctxCircleCanvas = circleCanvas.getContext("2d");
-        ctxCircleCanvas.fillStyle = 'blue'
-        ctxCircleCanvas.clearRect(0, 0, 250, 250);
         ctxCircleCanvas.fillStyle = circleColor.value
         const circle = new Circulo(circleRadius.value, circleCanvas.getAttribute('width'));
         circle.dibujar(ctxCircleCanvas);
-        console.log(circle)
+    });
+
+    square.addEventListener('click', () => {
+        square.style.display = "none";
+        squareDiv.style.display = "flex";
+    });
+
+    triangle.addEventListener('click', () => {
+        triangle.style.display = "none";
+        triangleDiv.style.display = "flex";
+    });
+
+    circle.addEventListener('click', () => {
+        circle.style.display = "none";
+        circleDiv.style.display = "flex";
     });
 
 });
