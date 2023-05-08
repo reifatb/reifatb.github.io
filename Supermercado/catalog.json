@@ -1,0 +1,57 @@
+{
+    "items": [{
+            "id": "platano",
+            "name": "Fruta curva amarilla",
+            "price": 1,
+            "type":"fruit"
+        },
+        {
+            "id": "manzana",
+            "name": "Fruta redonda roja",
+            "price": 0.5,
+            "type":"fruit"
+        },
+        {
+            "id": "naranja",
+            "name": "Fruta redonda naranja",
+            "price": 1.2,
+            "type":"fruit"
+        },
+        {
+            "id": "poloRosa",
+            "name": "Helado rosa",
+            "price": 0.1,
+            "type":"frozenFood"
+        },
+        {
+            "id": "poloAzul",
+            "name": "Helado azul",
+            "price": 0.09,
+            "type":"frozenFood"
+        },
+        {
+            "id": "poloLila",
+            "name": "Helado lila",
+            "price": 0.09,
+            "type":"frozenFood"
+        },
+        {
+            "id": "chuletaRoja",
+            "name": "Chuleta roja",
+            "price": 2,
+            "type":"meat"
+        },
+        {
+            "id": "chuletaMenosRoja",
+            "name": "Chuleta menos roja",
+            "price": 2.5,
+            "type":"meat"
+        },
+        {
+            "id": "pollo",
+            "name": "Pollo",
+            "price": 1.75,
+            "type":"meat"
+        }
+    ]
+}

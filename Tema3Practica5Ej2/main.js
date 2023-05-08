@@ -18,6 +18,8 @@ window.addEventListener("DOMContentLoaded", () => {
     const circleColor = document.getElementById('circleColor');
 
     const circle = document.getElementById('circle');
+    const triangle = document.getElementById('triangle');
+    const square = document.getElementById('square');
 
     squareDiv.style.display = "none";
     triangleDiv.style.display = "none";

@@ -1,0 +1,35 @@
+{
+  "empresa": "Pizza Nueba",
+  "ciudad": "Vigo",
+  "members": [
+    {
+      "nombre": "Pizza margarita",
+      "precio": 20,
+      "identificador": 1,
+      "ingredientes": [
+        "Champiñones",
+        "Jamón Cocido"
+      ]
+    },
+    {
+      "nombre": "Pizza barbacoa",
+      "precio": 25,
+      "identificador": 2,
+      "ingredientes": [
+        "Carne",
+        "Salsa barbacoa",
+        "Extra de queso"
+      ]
+    },
+    {
+      "nombre": "Pizza atún",
+      "precio": 22,
+      "identificador": 3,
+      "ingredientes": [
+        "Atún",
+        "Aceitunas negras",
+        "Anchoa"
+      ]
+    }
+  ]
+}

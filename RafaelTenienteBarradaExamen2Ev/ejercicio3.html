@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Examen_Ejercicio 3: Valoracion: 1,5 puntos</title>
+  </head>
+
+  <body>
+    <script>
+      // Crea la clase abstracta Mamifero con nombre, edad, y método comer
+      class Mamifero {
+        constructor(nombre, edad) {
+          if (this.constructor === Mamifero) {
+            throw new Error("La clase Mamifero es abstracta");
+          }
+          this.nombre;
+          this.edad;
+        }
+        comer() {
+          throw new Error(
+            "Este es un método abstracto y se debe sobreescribir en las subclases"
+          );
+        }
+      }
+
+      // Crea la clase Persona que hereda de Mamífero
+      class Persona extends Mamifero {
+        constructor(nombre, edad) {
+          super();
+          this.nombre = nombre;
+          this.edad = edad;
+        }
+        comer() {}
+      }
+
+      // Crea un objeto Mamífero
+      const mamifero = new Mamifero();
+
+      // Crea un objeto Persona
+      const pedro = new Persona("Pedro", 3);
+
+      // Crea el objeto manzanaRoja con los siguientes atributo: nombre, tamaño, tipo (dulce/amarga),
+      // utilizando un constructor de objetos
+      const manzanaRoja = {
+        nombre: "manzanaRoja",
+        tamaño: "grande",
+        tipo: "dulce",
+      };
+
+      // Añadir atributos al objeto manzanaRoja
+      manzanaRoja.color = "rojo";
+
+      //Recorrer las propiedades del objeto manzanaRoja
+      for (let propiedad in manzanaRoja) {
+        console.log(propiedad);
+      }
+
+      // Crear una cookie, almacenarla y modificarla
+      document.cookie = "user=Juan; max-age=36000; SameSite=none; secure";
+    </script>
+  </body>
+</html>

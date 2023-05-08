@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    width: 252px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+img {
+    display: inline;
+    border: solid 2px purple;
+}

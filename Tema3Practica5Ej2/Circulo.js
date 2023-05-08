@@ -3,8 +3,7 @@ class Circulo extends Forma {
         super();
         this.radio = radio;
         this.center = new Punto(ladoLienzo / 2, ladoLienzo / 2);
-        // this.centerX = ladoLienzo / 2;
-        // this.centerY = ladoLienzo / 2;
+        
     }
 
     dibujar(ctx) {

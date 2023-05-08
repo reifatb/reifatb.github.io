@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ececec;
+}
+
+/* <-----HEADER-----> */
+
+header {
+    background-color: #ececec;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+#headerFirstRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logoLink {
+    display: inline-block;
+    border: solid 2px #E6843A;
+    border-radius: 5px;
+    height: 40px;
+    font-size: 35px;
+    color: #E6843A;
+    font-weight: bolder;
+    margin: 0 0.5rem;
+}
+
+#logoLink img {
+    height: 30px;
+    filter: invert(63%) sepia(88%) saturate(714%) hue-rotate(328deg) brightness(90%) contrast(101%);
+}
+
+#loginAndCart ul {
+    display: flex;
+    margin: 0 10px;
+}
+
+#loginAndCart li {
+    list-style: none;
+    margin: 0 10px;
+    border: solid 2px #E6843A;
+    border-radius: 25px;
+    padding: 0 0.5rem;
+    color: #E6843A;
+    width: 100px;
+    text-align: center;
+}
+
+#loginAndCart li:hover {
+    background-color: #E6843A;
+    color: #ffffff;
+    transform: scale(1.2);
+}
+
+#loginAndCart li:last-child {
+    border: none;
+    width: inherit;
+}
+
+#loginAndCart li:last-child:hover {
+    background-color: #ececec;
+    transform: scale(1.2);
+}
+
+#sigIn {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+#cartIcon {
+    height: 20px;
+    filter: invert(63%) sepia(88%) saturate(714%) hue-rotate(328deg) brightness(90%) contrast(101%);
+}
+
+#loginForm {
+    display: none;
+}
+
+nav {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background-color: #e6bb3a;
+}
+
+#sections {
+    display: inline-flex;
+    flex-direction: row;
+    list-style: none;
+    height: 100%;
+}
+
+#sections li {
+    margin: auto 35px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 16px 0;
+    width: 115px;
+    border-radius: 15px;
+}
+
+#sections li:hover,
+#sections li.selected {
+    background-color: #E6843A;
+}
+
+nav img {
+    height: 20px;
+    vertical-align: middle;
+    color: #E6843A;
+}
+
+/*  <-----Sidepanel-----> */
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: fit-content;
+    top: 0;
+    right: 0;
+    background-color: #ececec;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    /* border: solid 1px #E6843A */
+    border-radius: 5px;
+    padding-bottom: 15px;
+  }
+  
+  .sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #E6843A;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  td {text-align: center;}
+
+  td img {
+    max-height: 35px;
+    max-width: 35px;
+  }
+
+  table tfoot {
+    font-weight: bold;
+  }
+  
+
+
+/*  <-----MAIN-----> */
+
+#items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px 10%;
+}
+
+.card {
+    border-radius: 15px;
+    background-color: white;
+    height: 250px;
+    width: 200px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5%;
+}
+
+.card img {
+    height: 100px;
+
+}
+
+.addToCartForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.addToCartForm input[type=number] {
+    width: 35px;
+    border-radius: 25px;
+    border: solid 1px black;
+    text-align: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantityButton {
+    width: 19px;
+    height: 19px;
+    background-color: white;
+    border-radius: 50%;
+    border: solid 1px #E6843A;
+    color: #E6843A;
+}
+
+.addToCartForm input[type=submit] {
+    background-color: white;
+    border-radius: 25px;
+    border: solid 1px #E6843A;
+    color: #E6843A;
+    width: 50px;
+}
+
+.quantityButton:hover, .addToCartForm input[type=submit]:hover {
+    background-color: #E6843A;
+    color: #ffffff;
+}
+
